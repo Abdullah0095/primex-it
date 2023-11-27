@@ -14,6 +14,8 @@ import Contact from './Components/Contact/Contact';
 import HomePage from './Components/Home/HomePage/HomePage.jsx';
 import Services from './Components/Services/Services.jsx';
 
+import Admin from './Components/Admin/Admin.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: '/admin',
+    element: <Admin></Admin>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
