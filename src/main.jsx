@@ -15,6 +15,7 @@ import HomePage from './Components/Home/HomePage/HomePage.jsx';
 import Services from './Components/Services/Services.jsx';
 
 import Admin from './Components/Admin/Admin.jsx';
+import Blogs from './Components/Blogs/Blogs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         element: <Services />,
         loader: () => fetch('http://localhost:5000/service')
       },
+      {
+        path: 'blog',
+        element: <Blogs></Blogs>,
+        loader: () => fetch('http://localhost:5000/blog')
+      }
     ]
   },
   {
