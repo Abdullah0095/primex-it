@@ -16,6 +16,11 @@ import Services from './Components/Services/Services.jsx';
 
 import Admin from './Components/Admin/Admin.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
+import AdminAddService from './Components/Admin/AdminAddService/AdminAddService.jsx';
+import AdminAddBlog from './Components/Admin/AdminAddBlog/AdminAddBlog.jsx';
+import AdminServiceList from './Components/Admin/AdminServiceList/AdminServiceList.jsx';
+import AdminBlogList from './Components/Admin/AdminBlogList/AdminBlogList.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -44,12 +49,31 @@ const router = createBrowserRouter([
         path: 'blog',
         element: <Blogs></Blogs>,
         loader: () => fetch('http://localhost:5000/blog')
-      }
+      },
+
     ]
   },
   {
     path: '/admin',
-    element: <Admin></Admin>
+    element: <Admin></Admin>,
+    children: [
+      {
+        path: '/admin',
+        element: <AdminAddService></AdminAddService>
+      },
+      {
+        path: '/admin/addblog',
+        element: <AdminAddBlog></AdminAddBlog>
+      },
+      {
+        path: '/admin/servicelist',
+        element: <AdminServiceList></AdminServiceList>
+      },
+      {
+        path: '/admin/bloglist',
+        element: <AdminBlogList></AdminBlogList>
+      }
+    ]
   }
 ]);
 
