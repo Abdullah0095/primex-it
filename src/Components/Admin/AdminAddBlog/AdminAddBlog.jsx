@@ -27,28 +27,18 @@ const AdminAddBlog = () => {
 
     }
     return (
-        <div className='border border-red-600'>
-            
-            <div className="" >
-                
-                <div>
-                    <div className=" text-white">
-                        <h1 className="text-5xl font-bold text-lime-400">Add Blog</h1>
-                        <form c onSubmit={handlePostBlog}>
-
-                            <label htmlFor="">Blog Title</label>
-                            <input  type="text" name="title" id="" /> <br />
-                            <label htmlFor="">Blog detail</label>
-                            <textarea  type="text" name="description" id="" /> <br />
-                            <label  htmlFor="">Blog Link</label>
-                            <textarea name="link" id="" cols="25" rows="3" ></textarea> <br />
-
-                            <input className='m-10 p-2  border-4 border-sky-500 hover:bg-black hover:text-orange-50' type="submit" value="Post Blog" />
-
-
-                        </form>
-                    </div>
-                </div>
+            <div className='grid justify-items-center py-4'>
+            <div className="max-w-md text-white">
+                <h1 className="mb-5 text-5xl text-center font-bold text-lime-400">Add Blog</h1>
+                <form onSubmit={handlePostBlog}>
+                    <label className='m-2 font-bold' htmlFor="">Blog title</label>
+                    <input className='m-2 h-16 w-96' type="text" name="title" id="" /> <br />
+                    <label className='m-2 font-bold' htmlFor="">Blog Detail</label>
+                    <textarea className='m-2 h-16 w-96' type="text" name="description" id="" /> <br />
+                    <label className='m-2 font-bold' htmlFor="">Blog Link</label>
+                    <textarea className='m-2 h-16 w-96' type="text" name="link" id="" /> <br />
+                    <input className='m-2 p-3 rounded-md  border-4 border-sky-500 hover:bg-emerald-800 hover:text-black' type="submit" value="Add Blog" />
+                </form>
             </div>
         </div>
     );

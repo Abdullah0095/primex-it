@@ -21,7 +21,7 @@ const Services = () => {
 };
 
 const ServiceCard = ({ service }) => {
-    const { serviceName, serviceDescription } = service;
+    const { serviceName, serviceDescription, serviceImage } = service;
     return <>
         <div >
         
@@ -31,6 +31,7 @@ const ServiceCard = ({ service }) => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold text-lime-400">{serviceName}</h1>
                         <p className="mb-5 text-black text-lg font-semibold">{serviceDescription}</p>
+                        
                         <button className="btn btn-wide btn-outline btn-accent">read more...</button>
                     </div>
                 </div>

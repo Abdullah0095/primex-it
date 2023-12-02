@@ -67,11 +67,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/admin/servicelist',
-        element: <AdminServiceList></AdminServiceList>
+        element: <AdminServiceList></AdminServiceList>,
+        loader: () => fetch('http://localhost:5000/service')
       },
       {
         path: '/admin/bloglist',
-        element: <AdminBlogList></AdminBlogList>
+        element: <AdminBlogList></AdminBlogList>,
+        loader: () => fetch('http://localhost:5000/blog')
       }
     ]
   }
