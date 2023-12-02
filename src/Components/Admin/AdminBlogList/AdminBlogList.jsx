@@ -4,9 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 const AdminBlogList = () => {
     const blogLoadedData = useLoaderData();
     // console.log(blogLoadedData);
-
-    
-    
     return (
         <div>
             <h1>Posted Blog list are here </h1>
@@ -36,22 +33,27 @@ const AdminBlogList = () => {
 const BlogListDisplay = ({ blog }) => {
     const { blogTitle } = blog;
     // console.log(blogTitle)
-    
-    const handleDelete = _id => {
-        console.log(`delete the id ${_id}`)
+    const handleDelete = (_id) => {
+        console.log("deleted id is ", _id);
+        
+        fetch(`http://localhost:5000/blog/${_id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                alert("seccessfully deleted from database")
+            }
+        })
     }
-
     return (
-
-        <tbody>
-            
+        <tbody> 
             <tr>
                 <th>1</th>
                 <td>{blogTitle}</td>
                 <td><button className="btn btn-warning" onClick={() => handleDelete(blog._id)}>delete</button></td>
-
             </tr>
-
         </tbody>
 
     )

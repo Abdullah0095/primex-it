@@ -10,7 +10,7 @@ const AdminServiceList = () => {
 
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table text-center">
+                    <table className="table text-center text-lg font-bold">
                         <thead>
                             <tr>
                                 <th></th>
@@ -32,7 +32,18 @@ const ServiceListDisplay = ({ service }) => {
     const { serviceName } = service;
 
     const handleDelete = (_id) => {
-        console.log("clicked the id", _id)
+        console.log("delete the id", _id);
+        
+        fetch(`http://localhost:5000/service/${_id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount>0){
+                alert("Successfully deleted from database");
+            }
+        })
     }
 
     return (
