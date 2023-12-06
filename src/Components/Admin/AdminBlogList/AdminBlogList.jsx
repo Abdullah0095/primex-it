@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const AdminBlogList = () => {
@@ -43,10 +43,12 @@ const BlogListDisplay = ({ blog }) => {
         .then(data => {
             console.log(data);
             if(data.deletedCount > 0){
-                alert("seccessfully deleted from database")
+                alert("successfully deleted from database")
             }
         })
     }
+
+    
     return (
         <tbody> 
             <tr>

@@ -6,7 +6,6 @@ const AdminAddService = () => {
         const form = event.target;
         const serviceName = form.name.value;
         const serviceDescription = form.detail.value;
-        // const serviceImage = form.image.value;
         const service = { serviceName, serviceDescription};
         console.log(service)
 
@@ -32,7 +31,6 @@ const AdminAddService = () => {
                 <form onSubmit={handleAddService}>
                     <label className='m-2 font-bold' htmlFor="">Service Name</label>
                     <input className='m-4 h-16 w-96' type="text" name="name" id="" /> <br />
-                    {/* <input type="file" name="image" id="" /> */}
                     <label className='m-2 font-bold' htmlFor="">Service Detail</label>
                     <textarea className='m-4 h-16 w-96' type="text" name="detail" id="" /> <br />
                     <input className='m-4 p-3 rounded-md  border-4 border-sky-500 hover:bg-emerald-800 hover:text-black' type="submit" value="Add Service" />

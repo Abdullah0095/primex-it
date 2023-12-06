@@ -8,9 +8,9 @@ const Blogs = () => {
 
 
     return (
-        <div>
-            <h1 className='text-center m-4 text-5xl font-bold'>Blog post</h1>
-            <div className='grid md:grid-cols-2 mx-16 gap-14'>
+        <div className='bg-white min-h-screen'>
+            <h1 className='text-center text-black text-5xl font-bold'>Blog post</h1>
+            <div className='grid md:grid-cols-3 mx-16 gap-14'>
                 {
                     blogData.map(blog => <BlogCard blog={blog} key={blog._id}></BlogCard>)
                 }
@@ -22,17 +22,17 @@ const Blogs = () => {
 
 const BlogCard = ({ blog }) => {
 
-    const { blogTitle, blogDescription, blogLink} = blog;
+    const { blogTitle, blogDescription, blogLink } = blog;
 
     return <>
-        <div className="hero md:min-h-[400px]">
-            <div className="hero-overlay bg-opacity-50"></div>
-            <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold text-lime-400">{blogTitle}</h1>
-                    <p className="mb-5 text-black text-lg font-semibold">{blogDescription}</p>
-                    <Link to={blogLink} target="_blank" ><button className="btn btn-wide btn-outline btn-accent">Read more ...</button></Link>
-                    
+        <div className="hero md:min-h-[400px] ">
+            <div className="card min-h-[300px] max-h-fit w-96 shadow-xl bg-slate-950 text-white hover:mt-3">
+                <div className="card-body">
+                    <h2 className="card-title font-serif  italic">{blogTitle}</h2>
+                    <p className='font-mono text-lg'>{blogDescription}</p>
+                    <div className="card-actions justify-end">
+                        <Link to={blogLink} target="_blank" ><button className="btn btn-accent font-bold">Read More ...</button></Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,14 +6,14 @@ const Navbar = () => {
 
         <Link className='px-5' to='/'>Home</Link>
         <Link className='px-5' to='/service'>Services</Link>
-        <Link className='px-5' to='/'>testimonial</Link>
+        {/* <Link className='px-5' to='/'>testimonial</Link> */}
         <Link className='px-5' to='/blog'>Blogs</Link>
         <Link className='px-5' to='/about'>About Us</Link>
         <Link className='px-5' to='/contact'>Contact</Link>
     </>
     return (
         <div>
-            <div className="navbar">
+            <div className="navbar bg-white text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,14 +27,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <div className='text-2xl py-5'>
+                        <div className='text-2xl py-3 font-mono'>
                             {navList}
                         </div>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn btn-accent m-5" to='/admin'>ADMIN</Link>
-                   
+                    <Link className="btn btn-accent m-5 text-white font-bold" to='/admin'>ADMIN</Link>
+
                 </div>
             </div>
         </div>

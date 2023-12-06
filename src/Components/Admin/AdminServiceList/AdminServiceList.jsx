@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const AdminServiceList = () => {
     const serviceData = useLoaderData();
-    // console.log(serviceData)
+
+    const [number, setNumber] = useState(serviceData);
+    console.log(number[0])
     return (
         <div>
             <h1>service list is now avalable in admin</h1>
@@ -29,26 +31,28 @@ const AdminServiceList = () => {
 };
 
 const ServiceListDisplay = ({ service }) => {
+
     const { serviceName } = service;
 
     const handleDelete = (_id) => {
         console.log("delete the id", _id);
-        
+
         fetch(`http://localhost:5000/service/${_id}`, {
             method: "DELETE"
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.deletedCount>0){
-                alert("Successfully deleted from database");
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert("Successfully deleted from database");
+                }
+            })
     }
+    
 
     return (
         <tbody>
-            {/* row 1 */}
+            
             <tr>
                 <th>1</th>
                 <td>{serviceName}</td>
