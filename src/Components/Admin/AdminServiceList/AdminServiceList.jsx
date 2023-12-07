@@ -21,7 +21,7 @@ const AdminServiceList = () => {
                             </tr>
                         </thead>
                         {
-                            serviceData.map(service => <ServiceListDisplay key={service._id} service={service}></ServiceListDisplay>)
+                            serviceData.map((service, index) => <ServiceListDisplay index={index} key={service._id} service={service}></ServiceListDisplay>)
                         }
                     </table>
                 </div>
@@ -30,7 +30,7 @@ const AdminServiceList = () => {
     );
 };
 
-const ServiceListDisplay = ({ service }) => {
+const ServiceListDisplay = ({ service, index }) => {
 
     const { serviceName } = service;
 
@@ -54,7 +54,7 @@ const ServiceListDisplay = ({ service }) => {
         <tbody>
             
             <tr>
-                <th>1</th>
+                <th>{index+1}</th>
                 <td>{serviceName}</td>
                 <td><button className="btn btn-warning" onClick={() => handleDelete(service._id)}>delete</button></td>
 

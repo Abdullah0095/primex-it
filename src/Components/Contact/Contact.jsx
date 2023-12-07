@@ -25,7 +25,7 @@ const Contact = () => {
                     <div>detail</div>
                     <div className='col-span-3 border border-teal-900 p-4 m-4'>
                         <form ref={form} onSubmit={sendEmail}>
-                            <div className='flex'>
+                            <div className='grid md:grid-cols-2'>
                                 <div>
                                     <input className='bg-white border border-black h-12 w-96 text-black mx-2 px-4 font-bold text-lg' placeholder='Your Full Name' type="text" name="user_name" />
                                 </div>
