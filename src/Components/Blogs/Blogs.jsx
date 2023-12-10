@@ -4,25 +4,23 @@ import { Link, useLoaderData } from 'react-router-dom';
 const Blogs = () => {
 
     const blogData = useLoaderData();
-    console.log(blogData);
+    // console.log(blogData);
 
 
     return (
         <div className='bg-white min-h-screen'>
             <h1 className='text-center text-black text-5xl font-bold'>Blog post</h1>
             <div className='grid md:grid-cols-3 mx-16 gap-14'>
-                {
-                    blogData.map(blog => <BlogCard blog={blog} key={blog._id}></BlogCard>)
-                }
+                {blogData.map(blog => <BlogCard blog={blog} key={blog._id}></BlogCard>)}
             </div>
 
         </div>
     );
 };
 
-const BlogCard = ({ blog }) => {
+const BlogCard = ({ blog}) => {
 
-    const { blogTitle, blogDescription, blogLink } = blog;
+    const { blogTitle, blogDescription, blogLink} = blog;
 
     return <>
         <div className="hero md:min-h-[400px] ">

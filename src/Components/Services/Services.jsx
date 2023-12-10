@@ -1,5 +1,5 @@
 import React from 'react';
-import service1 from '../../assets/photos/sevice1.jpg'
+
 import { useLoaderData } from 'react-router-dom';
 
 const Services = () => {
