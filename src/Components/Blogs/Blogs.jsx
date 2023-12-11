@@ -6,14 +6,12 @@ const Blogs = () => {
     const blogData = useLoaderData();
     // console.log(blogData);
 
-
     return (
-        <div className='bg-white min-h-screen'>
-            <h1 className='text-center text-black text-5xl font-bold'>Blog post</h1>
+        <div className='bg-white min-h-screen mt-[-50px]'>
+            <h1 className='text-center text-black text-5xl font-bold py-12'>Blog post</h1>
             <div className='grid md:grid-cols-3 mx-16 gap-14'>
                 {blogData.map(blog => <BlogCard blog={blog} key={blog._id}></BlogCard>)}
             </div>
-
         </div>
     );
 };

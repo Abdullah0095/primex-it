@@ -7,13 +7,13 @@ const Services = () => {
     // console.log(serviceData);
 
     return (
-        <div className='bg-white min-h-screen'>
-            <h4 className='text-center text-black text-lg py-3'>WHAT WE DO</h4>
+        <div className='bg-white min-h-screen mt-[-50px]'>
+            <h4 className='text-center text-black text-lg py-12'>WHAT WE DO</h4>
             <h1 className='text-center text-black text-4xl mx-4 font-bold pb-8'>We’ve got everything you need to launch and grow your business</h1>
             <div className='grid md:grid-cols-2 mx-16 gap-8'>
-                {
-                    serviceData.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
-                }
+
+                {serviceData.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)}
+
             </div>
 
         </div>
@@ -23,7 +23,7 @@ const Services = () => {
 const ServiceCard = ({ service }) => {
     const { serviceName, serviceDescription } = service;
     return <>
-        <div >
+        <div>
             {/* style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg )' }} */}
             <div className="hero min-h-[350px] bg-slate-950 hover:m-0 hover:bg-slate-800 rounded" >
                 {/* <div className="hero-overlay bg-opacity-50"></div> */}

@@ -32,11 +32,11 @@ const AdminAddBlog = () => {
                 <h1 className="mb-5 text-5xl text-center font-bold text-lime-400">Add Blog</h1>
                 <form onSubmit={handlePostBlog}>
                     <label className='m-2 font-bold' htmlFor="">Blog title</label>
-                    <input className='m-2 h-16 w-96 bg-white rounded-md text-black text-xl' type="text" name="title" id="" /> <br />
+                    <input className='m-2 h-16 w-96 bg-rose-900 rounded-md text-white text-xl' type="text" name="title" id="" /> <br />
                     <label className='m-2 font-bold' htmlFor="">Blog Detail</label>
-                    <textarea className='m-2 h-16 w-96 bg-white rounded-md text-black text-xl' type="text" name="description" id="" /> <br />
+                    <textarea className='m-2 h-16 w-96 bg-rose-900 rounded-md text-white text-xl' type="text" name="description" id="" /> <br />
                     <label className='m-2 font-bold' htmlFor="">Blog Link</label>
-                    <textarea className='m-2 h-16 w-96 bg-white rounded-md text-black text-xl' type="text" name="link" id="" /> <br />
+                    <textarea className='m-2 h-16 w-96 bg-rose-900 rounded-md text-white text-xl' type="text" name="link" id="" /> <br />
                     <input className='m-2 p-3 rounded-md  border-4 border-sky-500 hover:bg-emerald-800 hover:text-black' type="submit" value="Add Blog" />
                 </form>
             </div>

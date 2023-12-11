@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const AdminBlogList = () => {
     const blogLoadedData = useLoaderData();
-    // console.log(blogLoadedData.length);
+    
     return (
         <div>
             <h1>Posted Blog list are here </h1>

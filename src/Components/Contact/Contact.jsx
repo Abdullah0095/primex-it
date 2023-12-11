@@ -1,4 +1,11 @@
-import React, { useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// Import the necessary FontAwesome packages and icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLocationDot, faClock, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+
+// Add the imported icons to the library
+library.add(faLocationDot, faClock, faEnvelope, faPhone);
+
 import emailjs from '@emailjs/browser';
 
 
@@ -23,21 +30,24 @@ const Contact = () => {
     // "https://i.ibb.co/G2yy6Sv/admin.jpg" 
 
     return (
-        <div className='min-h-screen bg-yellow-300' >
-            <div className='h-32 mt-[-110px]'>
+        <div className='min-h-screen mt-[-50px] bg-yellow-400' >
+            {/* <div className='h-40 mt-[-110px]'>
 
-            </div>
+            </div> */}
             <div>
-                <h1 className='text-center text-teal-900 text-5xl font-bold font-serif'>Contact Us</h1>
+                <h1 className='text-center text-teal-900 py-16 text-5xl font-bold font-serif'>Contact Us</h1>
             </div>
 
             <section>
                 <div className='grid md:grid-cols-5 justify-items-center'>
 
 
-                    <div className='text-black col-span-2 mx-24'>
+                    <div className='text-black col-span-2 mx-24 md:py-12'>
+
                         <div className='flex gap-4 py-2'>
-                            <div>Location</div>
+                            <div>
+                                <FontAwesomeIcon className='h-8 py-3' icon="fa-solid fa-location-dot" />
+                            </div>
                             <div>
                                 <h1 className='text-xl font-semibold'>Location:</h1>
                                 <p>43 Raymouth Rd. Baltemoer, London 3910</p>
@@ -45,15 +55,15 @@ const Contact = () => {
                         </div>
 
                         <div className='flex gap-4 py-2'>
-                            <div>Location</div>
+                            <div><FontAwesomeIcon className='h-8 py-4' icon="fa-solid fa-clock" /></div>
                             <div>
                                 <h1 className='text-xl font-semibold'>Open Hours:</h1>
-                                <p>Sunday-Friday: <br />11:00 AM - 2300 PM</p>
+                                <p>Sunday-Friday: <br />11:00 AM - 23:00 PM</p>
                             </div>
                         </div>
 
                         <div className='flex gap-4 py-2'>
-                            <div>Location</div>
+                            <div><FontAwesomeIcon className='h-8 py-3' icon="fa-solid fa-envelope" /></div>
                             <div>
                                 <h1 className='text-xl font-semibold'>Email:</h1>
                                 <p>primexitconsultagency@gmail.com</p>
@@ -61,7 +71,7 @@ const Contact = () => {
                         </div>
 
                         <div className='flex gap-4 py-2'>
-                            <div>Location</div>
+                            <div><FontAwesomeIcon className='h-8 py-3' icon="fa-solid fa-phone" /></div>
                             <div>
                                 <h1 className='text-xl font-semibold'>Call:</h1>
                                 <p>+1 1234 55488 55</p>

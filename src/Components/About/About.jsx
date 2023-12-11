@@ -55,9 +55,10 @@ const About = () => {
                 <div className='text-center p-28 bg-teal-600 mt-[-110px]'>
                     <h1 className='text-white font-bold text-6xl'>About us</h1>
                     <p className='py-3 text-black text-lg'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <button className="btn btn-success  w-40 mt-8 text-white text-lg">GET IN TOUCH</button>
+                    <Link to='/contact'><button className="btn btn-success  w-40 mt-8 text-white text-lg">GET IN TOUCH</button></Link>
                 </div>
             </section>
+
             <section>
                 <div className='grid md:grid-cols-2 py-32'>
                     <div className='grid justify-items-end px-4 md:pl-4'>
@@ -71,6 +72,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
+
             <section>
                 <div>
                     <h1 className='text-5xl text-emerald-900 text-center font-bold pb-12'>Team</h1>
@@ -81,8 +83,6 @@ const About = () => {
                         teamData.map(member => <MemberCard key={member.id} member={member}></MemberCard>)
                     }
                 </div>
-
-
             </section>
         </div>
     );

@@ -8,8 +8,8 @@ const HomePage = () => {
     return (
         <div>
             <HomePageBanner />
-            <HomePageHire />
-            <HomePageAbout />
+            {/* <HomePageHire />
+            <HomePageAbout /> */}
         </div>
     );
 };

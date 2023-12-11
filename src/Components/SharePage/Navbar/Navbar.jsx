@@ -6,14 +6,15 @@ const Navbar = () => {
 
         <Link className='px-5' to='/'>Home</Link>
         <Link className='px-5' to='/service'>Services</Link>
-        {/* <Link className='px-5' to='/'>testimonial</Link> */}
         <Link className='px-5' to='/blog'>Blogs</Link>
         <Link className='px-5' to='/about'>About Us</Link>
         <Link className='px-5' to='/contact'>Contact</Link>
+        <Link className='px-5' to='/admin'>Admin</Link>
+
     </>
     return (
-        <div>
-            <div className="navbar bg-white text-black">
+        <div className='sticky top-0'>
+            {/* <div className="navbar bg-white text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,6 +37,23 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <Link className="btn btn-accent m-5 text-white font-bold" to='/admin'>ADMIN</Link>
 
+                </div>
+            </div> */}
+
+            <div className="drawer">
+                <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
+                    {/* Page content here */}
+                    <label htmlFor="my-drawer" className="btn btn-outline btn-warning drawer-button">MENU</label>
+                </div>
+                <div className="drawer-side">
+                    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 w-40 min-h-full bg-base-100 text-white text-lg font-semibold">
+                        {/* Sidebar content here */}
+                        <li>{navList}</li>
+
+
+                    </ul>
                 </div>
             </div>
         </div>
