@@ -22,7 +22,7 @@ const BlogCard = ({ blog}) => {
 
     return <>
         <div className="hero md:min-h-[400px] ">
-            <div className="card min-h-[300px] max-h-fit w-96 shadow-xl bg-slate-950 text-white hover:mt-3">
+            <div className="card min-h-[300px] max-h-fit w-96 shadow-xl bg-slate-950 text-white">
                 <div className="card-body">
                     <h2 className="card-title font-serif  italic">{blogTitle}</h2>
                     <p className='font-mono text-lg'>{blogDescription}</p>

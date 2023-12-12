@@ -20,6 +20,7 @@ import AdminAddService from './Components/Admin/AdminAddService/AdminAddService.
 import AdminAddBlog from './Components/Admin/AdminAddBlog/AdminAddBlog.jsx';
 import AdminServiceList from './Components/Admin/AdminServiceList/AdminServiceList.jsx';
 import AdminBlogList from './Components/Admin/AdminBlogList/AdminBlogList.jsx';
+import Login from './Components/Login/Login.jsx';
 
 
 const router = createBrowserRouter([
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/blog')
       }
     ]
+  },
+  {
+    path: '/login',
+    element: <Login></Login>
   }
 ]);
 

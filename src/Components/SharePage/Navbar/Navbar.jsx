@@ -10,6 +10,7 @@ const Navbar = () => {
         <Link className='px-5' to='/about'>About Us</Link>
         <Link className='px-5' to='/contact'>Contact</Link>
         <Link className='px-5' to='/admin'>Admin</Link>
+        <Link className='px-5' to='/login'>Login</Link>
 
     </>
     return (
@@ -40,11 +41,11 @@ const Navbar = () => {
                 </div>
             </div> */}
 
-            <div className="drawer">
+            <div className="drawer ">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     {/* Page content here */}
-                    <label htmlFor="my-drawer" className="btn btn-outline btn-warning drawer-button">MENU</label>
+                    <label htmlFor="my-drawer" className=" w-24 text-lg bg-slate-700 btn btn-outline btn-warning drawer-button">MENU</label>
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>

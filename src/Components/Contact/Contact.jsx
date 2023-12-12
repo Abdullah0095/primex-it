@@ -31,9 +31,7 @@ const Contact = () => {
 
     return (
         <div className='min-h-screen mt-[-50px] bg-yellow-400' >
-            {/* <div className='h-40 mt-[-110px]'>
-
-            </div> */}
+            
             <div>
                 <h1 className='text-center text-teal-900 py-16 text-5xl font-bold font-serif'>Contact Us</h1>
             </div>

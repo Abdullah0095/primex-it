@@ -55,7 +55,7 @@ const About = () => {
                 <div className='text-center p-28 bg-teal-600 mt-[-110px]'>
                     <h1 className='text-white font-bold text-6xl'>About us</h1>
                     <p className='py-3 text-black text-lg'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <Link to='/contact'><button className="btn btn-success  w-40 mt-8 text-white text-lg">GET IN TOUCH</button></Link>
+                    <Link to='/contact'><button className="btn btn-success animate-bounce w-40 mt-8 text-white text-lg">GET IN TOUCH</button></Link>
                 </div>
             </section>
 
