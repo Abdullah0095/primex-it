@@ -21,6 +21,8 @@ import AdminAddBlog from './Components/Admin/AdminAddBlog/AdminAddBlog.jsx';
 import AdminServiceList from './Components/Admin/AdminServiceList/AdminServiceList.jsx';
 import AdminBlogList from './Components/Admin/AdminBlogList/AdminBlogList.jsx';
 import Login from './Components/Login/Login.jsx';
+import PrivateRoute from './Components/Routes/PrivateRoute';
+
 
 
 const router = createBrowserRouter([
@@ -51,37 +53,38 @@ const router = createBrowserRouter([
         element: <Blogs></Blogs>,
         loader: () => fetch('http://localhost:5000/blog')
       },
+      {
+        path: '/admin',
+        element: <Login></Login>
+      }
 
     ]
   },
   {
-    path: '/admin',
+    path: '/myadmin',
     element: <Admin></Admin>,
     children: [
       {
-        path: '/admin',
-        element: <AdminAddService></AdminAddService>
+        path: '/myadmin',
+        element: <AdminAddService ></AdminAddService>
       },
       {
-        path: '/admin/addblog',
+        path: '/myadmin/addblog',
         element: <AdminAddBlog></AdminAddBlog>
       },
       {
-        path: '/admin/servicelist',
+        path: '/myadmin/servicelist',
         element: <AdminServiceList></AdminServiceList>,
         loader: () => fetch('http://localhost:5000/service')
       },
       {
-        path: '/admin/bloglist',
+        path: '/myadmin/bloglist',
         element: <AdminBlogList></AdminBlogList>,
         loader: () => fetch('http://localhost:5000/blog')
       }
     ]
   },
-  {
-    path: '/login',
-    element: <Login></Login>
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

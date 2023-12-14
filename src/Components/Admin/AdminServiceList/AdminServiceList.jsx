@@ -33,6 +33,7 @@ const ServiceListDisplay = ({ service, index }) => {
 
     const handleDelete = (_id) => {
         console.log("delete the id", _id);
+        window.location.reload();
 
         fetch(`http://localhost:5000/service/${_id}`, {
             method: "DELETE"

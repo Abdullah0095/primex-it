@@ -6,9 +6,6 @@ const AdminBlogList = () => {
     
     return (
         <div>
-            <h1>Posted Blog list are here </h1>
-
-
             <div>
                 <div className="overflow-x-auto">
                     <table className="table text-center text-lg font-bold">
@@ -37,6 +34,7 @@ const BlogListDisplay = ({ blog, index }) => {
     // console.log(blogTitle)
     const handleDelete = (_id) => {
         console.log("deleted id is ", _id);
+        window.location.reload();
 
         fetch(`http://localhost:5000/blog/${_id}`, {
             method: "DELETE"
