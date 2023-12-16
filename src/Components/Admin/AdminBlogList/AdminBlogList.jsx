@@ -11,7 +11,7 @@ const AdminBlogList = () => {
                     <table className="table text-center text-lg font-bold">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className='text-xl'>
                                 <th></th>
                                 <th>Name</th>
                                 <th>Action</th>
@@ -51,8 +51,8 @@ const BlogListDisplay = ({ blog, index }) => {
         <tbody>
             <tr>
                 <th>{index + 1}</th>
-                <td>{blogTitle}</td>
-                <td><button className="btn btn-warning" onClick={() => handleDelete(blog._id)}>delete</button></td>
+                <td className='text-white'>{blogTitle}</td>
+                <td><button className="btn btn-warning w-24" onClick={() => handleDelete(blog._id)}>delete</button></td>
             </tr>
         </tbody>
 

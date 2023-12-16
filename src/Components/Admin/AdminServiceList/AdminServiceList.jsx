@@ -5,13 +5,11 @@ const AdminServiceList = () => {
 
     return (
         <div>
-            <h1>service list is now avalable in admin</h1>
-
             <div>
                 <div className="overflow-x-auto">
                     <table className="table text-center text-lg font-bold">
                         <thead>
-                            <tr>
+                            <tr className='text-xl'>
                                 <th></th>
                                 <th>Name</th>
                                 <th>Action</th>
@@ -54,8 +52,8 @@ const ServiceListDisplay = ({ service, index }) => {
 
             <tr>
                 <th>{index + 1}</th>
-                <td>{serviceName}</td>
-                <td><button className="btn btn-warning" onClick={() => handleDelete(service._id)}>delete</button></td>
+                <td className='text-white'>{serviceName}</td>
+                <td><button className="btn btn-warning w-24" onClick={() => handleDelete(service._id)}>delete</button></td>
 
             </tr>
 

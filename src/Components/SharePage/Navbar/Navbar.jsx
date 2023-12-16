@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link className='px-5' to='/blog'>Blogs</Link>
         <Link className='px-5' to='/about'>About Us</Link>
         <Link className='px-5' to='/contact'>Contact</Link>
-        <Link className='px-5' to='/admin'>Admin</Link>
+        {/* <Link className='px-5' to='/admin'>Admin</Link> */}
         {/* <Link className='px-5' to='/login'>Login</Link> */}
 
     </>

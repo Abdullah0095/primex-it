@@ -9,13 +9,13 @@ const Admin = () => {
 
             <div className='grid md:grid-cols-8 mx-8 gap-3'>
                 <div className='mx-24 md:col-span-2 md:mx-4 md:py-24'>
-                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-full text-xl font-semibold font-serif'><Link to='/myadmin'>ADD SERVICE</Link></div>
-                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-full text-xl font-semibold font-serif'><Link to='/myadmin/addblog'>ADD BLOG</Link></div>
-                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-full text-xl font-semibold font-serif'><Link to='/myadmin/servicelist'>SERVICE LIST</Link></div>
-                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-full text-xl font-semibold font-serif'><Link to='/myadmin/bloglist'>BLOG LIST</Link></div>
+                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-md text-xl font-semibold font-serif border-2 border-gray-400'><Link to='/myadmin'>ADD SERVICE</Link></div>
+                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-md text-xl font-semibold font-serif border-2 border-gray-400'><Link to='/myadmin/addblog'>ADD BLOG</Link></div>
+                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-md text-xl font-semibold font-serif border-2 border-gray-400'><Link to='/myadmin/servicelist'>SERVICE LIST</Link></div>
+                    <div className='animate-charcter-admin w-48 p-2 m-4 text-center rounded-md text-xl font-semibold font-serif border-2 border-gray-400'><Link to='/myadmin/bloglist'>BLOG LIST</Link></div>
                 </div>
 
-                <div className="md:col-span-6 border-2  border-white md:h-[500px]">
+                <div className="md:col-span-6 border-2  border-white md:min-h-[500px]">
                     <Outlet></Outlet>
                 </div>
 

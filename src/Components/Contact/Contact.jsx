@@ -23,6 +23,7 @@ const Contact = () => {
             });
 
         e.target.reset();
+        alert("Email has sent successfully, We will contact soon!!!!")
 
     };
 
@@ -78,18 +79,18 @@ const Contact = () => {
                     </div>
 
 
-                    <div className='col-span-3 border-4 border-green-300  px-4 py-5 m-1'>
+                    <div className='col-span-3  border-4 border-orange-400  px-4 py-5 m-1'>
                         <form onSubmit={sendEmail}>
                             <div className='grid md:grid-cols-2'>
                                 <div>
-                                    <input className='bg-green-300 outline-none rounded-md  h-12 w-72 md:w-96  text-black m-2 px-4 font-bold text-lg' placeholder='Your Full Name' type="text" name="user_name" required />
+                                    <input className='bg-orange-700 outline-none rounded-md  h-12 w-72 md:w-96  text-black m-2 px-4 font-bold text-lg' placeholder='Your Full Name' type="text" name="user_name" required />
                                 </div>
                                 <div>
-                                    <input className='bg-green-300 outline-none rounded-md h-12 w-72 md:w-96  text-black m-2 px-2 font-bold text-lg' placeholder='Your Email' type="email" name="user_email" required />
+                                    <input className='bg-orange-700 outline-none rounded-md h-12 w-72 md:w-96  text-black m-2 px-2 font-bold text-lg' placeholder='Your Email' type="email" name="user_email" required />
                                 </div>
                             </div>
-                            <input className='bg-green-300 outline-none rounded-md h-12 w-72 md:w-96  text-black m-2 px-4 font-bold text-lg' placeholder='subject' type="text" name="user_subject" required /> <br />
-                            <textarea className='bg-green-300 outline-none rounded-md text-black h-48 w-72 md:w-96 m-2 px-4 font-bold font-serif text-lg' placeholder='Write Your Message here' name="message" required /> <br />
+                            <input className='bg-orange-700 outline-none rounded-md h-12 w-72 md:w-96  text-black m-2 px-4 font-bold text-lg' placeholder='subject' type="text" name="user_subject" required /> <br />
+                            <textarea className='bg-orange-700 outline-none rounded-md text-black h-48 w-72 md:w-96 m-2 px-4 font-bold font-serif text-lg' placeholder='Write Your Message here' name="message" required /> <br />
                             <input className='bg-green-700 p-2 mx-2 h-12 w-32 rounded text-white text-xl' type="submit" value="Send" />
                         </form>
                     </div>
