@@ -25,7 +25,7 @@ const AdminAddService = () => {
             })
     }
     return (
-        <div className='grid justify-items-center py-4'>
+        <div className='grid justify-items-center py-12'>
             <div className="max-w-md text-white">
                 <h1 className="mb-5 text-5xl text-center font-bold text-lime-400">Add Service</h1>
                 <form onSubmit={handleAddService}>
