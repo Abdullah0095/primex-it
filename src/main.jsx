@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
+
+import './style.css'
 import './index.css'
 import {
   createBrowserRouter,
@@ -21,7 +23,7 @@ import AdminAddBlog from './Components/Admin/AdminAddBlog/AdminAddBlog.jsx';
 import AdminServiceList from './Components/Admin/AdminServiceList/AdminServiceList.jsx';
 import AdminBlogList from './Components/Admin/AdminBlogList/AdminBlogList.jsx';
 import Login from './Components/Login/Login.jsx';
-import PrivateRoute from './Components/Routes/PrivateRoute';
+
 
 
 

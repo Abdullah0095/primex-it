@@ -30,10 +30,10 @@ const Contact = () => {
     // "https://i.ibb.co/G2yy6Sv/admin.jpg" 
 
     return (
-        <div className='min-h-screen mt-[-50px] bg-yellow-400' >
+        <div className='min-h-screen mt-[-50px] bg-white' >
             
             <div>
-                <h1 className='text-center text-teal-900 py-16 text-5xl font-bold font-serif'>Contact Us</h1>
+                <h1 className='text-center text-teal-900 py-12 text-5xl font-bold font-serif'>Contact Us</h1>
             </div>
 
             <section>
